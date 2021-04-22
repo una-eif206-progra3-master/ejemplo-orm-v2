@@ -33,7 +33,7 @@ public class CourseGroup {
     @Column(name = "schedule")
     private String schedule;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne()
     @JoinColumn(name = "id_course", nullable = false)
     private Course course;
 
