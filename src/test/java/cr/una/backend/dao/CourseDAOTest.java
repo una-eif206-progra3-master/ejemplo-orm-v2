@@ -70,11 +70,13 @@ public class CourseDAOTest {
     @Test
     public void deleteById() {
         Course course;
-        int idEntity = 3;
+        int idEntity = 1;
         courseDAO = new CourseDAOImpl();
         courseDAO.deleteById(idEntity);
         course = courseDAO.findById(idEntity);
 
         assertNull(course);
     }
+
+
 }

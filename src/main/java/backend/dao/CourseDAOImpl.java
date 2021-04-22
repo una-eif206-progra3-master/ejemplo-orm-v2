@@ -42,9 +42,7 @@ public class CourseDAOImpl implements CourseDAO {
     @Override
     public void deleteById(int id) {
         final Course course = findById(id);
-        session.beginTransaction();
         delete(course);
-        session.getTransaction().commit();
     }
 
     @Override
